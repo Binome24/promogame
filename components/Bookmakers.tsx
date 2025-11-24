@@ -16,7 +16,7 @@ const bookmakers: Bookmaker[] = [
     name: 'WinWin',
     url: 'https://refpa712080.pro/L?tag=d_4069424m_64485c_&site=4069424&ad=64485',
     code: 'LPBN',
-    color: 'from-red-600 to-red-800',
+    color: 'from-green-900 to-green-950', // Vert très foncé
     bonus: 'Bonus 100% + Freebets',
     logo: 'WW'
   },
@@ -24,7 +24,7 @@ const bookmakers: Bookmaker[] = [
     name: '1xBet',
     url: 'https://refpa58144.com/L?tag=d_3742516m_1599c_&site=3742516&ad=1599',
     code: 'LPBN',
-    color: 'from-blue-600 to-blue-800',
+    color: 'from-blue-600 to-blue-900', // Bleu Standard
     bonus: 'Bonus 200% Premier Dépôt',
     logo: '1X'
   },
@@ -32,23 +32,23 @@ const bookmakers: Bookmaker[] = [
     name: 'BetWinner',
     url: 'https://bw-prm.com/bonus-100-01/?p=%2Fregistration%2F&id=25c6',
     code: 'LPBN',
-    color: 'from-yellow-500 to-yellow-700',
+    color: 'from-lime-400 to-lime-600 text-black', // Vert Citron (texte noir pour contraste)
     bonus: '130€ de Bonus',
     logo: 'BW'
   },
   {
     name: 'Melbet',
-    url: '#', // Placeholder as user didn't provide specific link yet, generic fallback
+    url: '#', 
     code: 'EXPERT101',
-    color: 'from-orange-500 to-orange-700',
+    color: 'from-amber-800 to-yellow-950', // Marron / Terre
     bonus: 'Bonus de Bienvenue Boosté',
     logo: 'MB'
   },
   {
     name: 'MegaPari',
-    url: '#', // Placeholder
+    url: '#', 
     code: 'EXPERT101',
-    color: 'from-indigo-600 to-indigo-800',
+    color: 'from-red-600 to-red-900', // Rouge vif à foncé
     bonus: 'Bonus Casino + Sport',
     logo: 'MP'
   }
@@ -76,7 +76,7 @@ export const Bookmakers: React.FC = () => {
                   <div className="text-4xl font-black text-white/20 absolute select-none">
                     {bookie.logo}
                   </div>
-                  <h3 className="text-2xl font-bold text-white relative z-10 drop-shadow-md">{bookie.name}</h3>
+                  <h3 className={`text-2xl font-bold relative z-10 drop-shadow-md ${bookie.name === 'BetWinner' ? 'text-black' : 'text-white'}`}>{bookie.name}</h3>
                 </div>
 
                 {/* Content */}
